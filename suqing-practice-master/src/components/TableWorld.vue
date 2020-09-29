@@ -35,6 +35,11 @@
         </template>
       </el-table-column>
     </el-table>
+    <div style="margin-top: 20px">
+      <el-button size="mini" type="danger" @click="wholeleDelete()"
+        >全部删除</el-button
+      >
+    </div>
   </div>
 </template>
 
@@ -79,6 +84,10 @@ export default {
     handleDelete(index, row) {
       console.log(index, row);
       this.tableData.splice(index, 1);
+    },
+    wholeleDelete(index, row) {
+      console.log(index, row);
+      this.tableData.splice(this.tableData);
     },
   },
 };
